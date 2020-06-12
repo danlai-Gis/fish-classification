@@ -30,9 +30,8 @@ curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.li
 sudo apt-get update
 
 sudo apt-get install -y unzip
-sudo apt install -y docker.io
 
-sudo groupadd docker
-sudo usermod -aG docker $USER
+sudo apt-get install -y nvidia-docker2
+sudo pkill -SIGHUP dockerd
 
-echo 'Please reboot your Machine.'
+docker build -t fish-detection .
