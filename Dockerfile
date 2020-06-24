@@ -22,3 +22,4 @@ RUN pip install -U scikit-image
 RUN pip install keras==2.1.6
 RUN pip3 install imgaug
 RUN pip3 install -U scikit-learn
+RUN pip install split-folders
